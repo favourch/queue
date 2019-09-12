@@ -1,29 +1,26 @@
+<?php $__env->startSection('title', trans('messages.display.display')); ?>
 
-@extends('layouts.mainappqueue')
+<?php $__env->startSection('css'); ?>
+    <link href="<?php echo e(asset('assets/js/plugins/data-tables/css/jquery.dataTables.min.css')); ?>" type="text/css" rel="stylesheet" media="screen,projection">
+<?php $__env->stopSection(); ?>
 
-@section('title', trans('messages.display.display'))
-
-@section('css')
-    <link href="{{ asset('assets/js/plugins/data-tables/css/jquery.dataTables.min.css') }}" type="text/css" rel="stylesheet" media="screen,projection">
-@endsection
-
-@section('content')
+<?php $__env->startSection('content'); ?>
 
     <div id="callarea" class="row" style="line-height:1.23">
         <div class="col s12 m4">
             <div class="card">
                 <div class="card-content" style="font-size:14px">
-                    <span class="card-title" style="line-height:0;font-size:22px"><strong>{{ trans('QUEUE') }}</strong></span>
+                    <span class="card-title" style="line-height:0;font-size:22px"><strong><?php echo e(trans('QUEUE')); ?></strong></span>
                     <div class="divider" style="margin:15px 0 10px 0"></div>
                     <table id="call-table" class="display" cellspacing="0">
                         <thead style="display:none;">
                             <tr>
                                 <th>#</th>
-                                <th>{{ trans('messages.mainapp.menu.department') }}</th>
-                                <th>{{ trans('messages.call.number') }}</th>
-                                <!--<th>{{ trans('messages.call.called') }}</th>-->
-                                <!--<th>{{ trans('messages.mainapp.menu.counter') }}</th>-->
-                                <!--<th>{{ trans('messages.call.recall') }}</th>-->
+                                <th><?php echo e(trans('messages.mainapp.menu.department')); ?></th>
+                                <th><?php echo e(trans('messages.call.number')); ?></th>
+                                <!--<th><?php echo e(trans('messages.call.called')); ?></th>-->
+                                <!--<th><?php echo e(trans('messages.mainapp.menu.counter')); ?></th>-->
+                                <!--<th><?php echo e(trans('messages.call.recall')); ?></th>-->
                             </tr>
                         </thead>
                     </table>
@@ -32,21 +29,21 @@
         </div>
         <div class="col m8">
             <div class="card-panel center-align" style="margin-bottom:0">
-                <span style="font-size:45px">{{ trans('messages.display.token') }} {{ trans('messages.call.number') }}</span><br>
-                <span id="num0" style="font-size:185px;color:red;font-weight:bold;line-height:1.5">{{ $data[0]['number'] }}</span><br>
-                <span style="font-size:40px">{{ trans('messages.display.please') }} {{ trans('messages.display.proceed_to') }}</span><br>
-                <span id="cou0" style="font-size:80px; color:red;line-height:1.5">{{ $data[0]['counter'] }}</span>
+                <span style="font-size:45px"><?php echo e(trans('messages.display.token')); ?> <?php echo e(trans('messages.call.number')); ?></span><br>
+                <span id="num0" style="font-size:185px;color:red;font-weight:bold;line-height:1.5"><?php echo e($data[0]['number']); ?></span><br>
+                <span style="font-size:40px"><?php echo e(trans('messages.display.please')); ?> <?php echo e(trans('messages.display.proceed_to')); ?></span><br>
+                <span id="cou0" style="font-size:80px; color:red;line-height:1.5"><?php echo e($data[0]['counter']); ?></span>
             </div>
         </div>
     </div>
-    <div class="row" style="margin-bottom:0;font-size:{{ $settings->size }}px;color:{{ $settings->color }}">
-        <marquee>{{ $settings->notification }}</marquee>
+    <div class="row" style="margin-bottom:0;font-size:<?php echo e($settings->size); ?>px;color:<?php echo e($settings->color); ?>">
+        <marquee><?php echo e($settings->notification); ?></marquee>
     </div>
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('script')
-    <script type="text/javascript" src="{{ asset('assets/js/plugins/data-tables/js/jquery.dataTables.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/js/voice.min.js') }}"></script>
+<?php $__env->startSection('script'); ?>
+    <script type="text/javascript" src="<?php echo e(asset('assets/js/plugins/data-tables/js/jquery.dataTables.min.js')); ?>"></script>
+    <script type="text/javascript" src="<?php echo e(asset('assets/js/voice.min.js')); ?>"></script>
     
     <script>
         $(function() {
@@ -67,7 +64,7 @@
         function checkcall() {
             $.ajax({
                 type: "GET",
-                url: "{{ url('assets/files/display') }}",
+                url: "<?php echo e(url('assets/files/display')); ?>",
                 cache: false,
                 success: function(response) {
                     s = JSON.parse(response);
@@ -85,12 +82,12 @@
                         $("#callarea").fadeIn();
                         if (curr!=0) {
                             var bleep = new Audio();
-                            bleep.src = '{{ url('assets/sound/sound1.mp3') }}';
+                            bleep.src = '<?php echo e(url('assets/sound/sound1.mp3')); ?>';
                             bleep.play();
 
                             window.setTimeout(function() {
-                                msg1 = '{!! trans('messages.display.token') !!} '+s[0].call_number+' {!! trans('messages.display.please') !!} {!! trans('messages.display.proceed_to') !!} '+s[0].counter;
-                                responsiveVoice.speak(msg1, "{{ $settings->language->display }}", {rate: 0.85});
+                                msg1 = '<?php echo trans('messages.display.token'); ?> '+s[0].call_number+' <?php echo trans('messages.display.please'); ?> <?php echo trans('messages.display.proceed_to'); ?> '+s[0].counter;
+                                responsiveVoice.speak(msg1, "<?php echo e($settings->language->display); ?>", {rate: 0.85});
                             }, 800);
                         }
                         curr = s[0].call_id;
@@ -106,7 +103,7 @@
         $(document).ready(function() {
             $.ajax({
                 type: "GET",
-                url: "{{ url('assets/files/display') }}",
+                url: "<?php echo e(url('assets/files/display')); ?>",
                 cache: false,
                 success: function(response) {
                     s = JSON.parse(response);
@@ -133,7 +130,7 @@
                     "searchable": false,
                     "visible": false
                 }],
-                "ajax": "{{ url('assets/files/call2') }}",
+                "ajax": "<?php echo e(url('assets/files/call2')); ?>",
                 "columns": [
                     { "data": "id" },
                     { "data": "department" },
@@ -149,4 +146,6 @@
             }, 3000);
         });
     </script>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.mainappqueue', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

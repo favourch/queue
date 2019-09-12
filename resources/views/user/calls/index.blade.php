@@ -208,7 +208,7 @@
         $(function() {
             var calltable = $('#call-table').dataTable({
                 "oLanguage": {
-                    "sLengthMenu": "Show _MENU_",
+                    "sLengthMenu": "Show _MENU_ entries",
                     "sSearch": "Search"
                 },
                 "columnDefs": [{
