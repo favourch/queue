@@ -50,7 +50,8 @@ class UpdateCallTable
 
         file_put_contents(base_path('assets/files/call'), json_encode($data));
 
-        //for display no not showing called
+        
+        //json Queue list for display
 
         $queues2 = Queue::with('department')
                     ->whereBetween('queues.created_at',[Carbon::now()->format('Y-m-d 00:00:00'), Carbon::now()->format('Y-m-d 23:59:59')])
@@ -60,6 +61,9 @@ class UpdateCallTable
         $queue_array2 = [];
         foreach ($queues2 as $key => $queue2) {
             if($queue2->called) {
+
+                //Remove entry from table when called
+                
                 //$queue_array2[$key]['id'] = ((int)$key)+1;
                 //$queue_array[$key]['department'] = $queue->department->name;
                 //$queue_array[$key]['number'] = ($queue->department->letter!='')?$queue->department->letter.'-'.$queue->number:$queue->number;
@@ -70,9 +74,11 @@ class UpdateCallTable
                 $queue_array2[$key]['id'] = ((int)$key)+1;
                 $queue_array2[$key]['department'] = $queue2->department->name;
                 $queue_array2[$key]['number'] = ($queue2->department->letter!='')?$queue2->department->letter.'-'.$queue2->number:$queue2->number;
+                
+                //Not needed for display queue
                 //$queue_array[$key]['called'] = 'No';
                 //$queue_array[$key]['counter'] = 'NIL';
-               // $queue_array[$key]['recall'] = '<button class="btn-floating disabled" disabled><i class="mdi-navigation-refresh"></i></button>';
+                // $queue_array[$key]['recall'] = '<button class="btn-floating disabled" disabled><i class="mdi-navigation-refresh"></i></button>';
             }
         }
 

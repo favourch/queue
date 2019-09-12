@@ -21,6 +21,8 @@
                                 <th>#</th>
                                 <th>{{ trans('messages.mainapp.menu.department') }}</th>
                                 <th>{{ trans('messages.call.number') }}</th>
+                                
+                                <!--hidden from display queue-->
                                 <!--<th>{{ trans('messages.call.called') }}</th>-->
                                 <!--<th>{{ trans('messages.mainapp.menu.counter') }}</th>-->
                                 <!--<th>{{ trans('messages.call.recall') }}</th>-->
@@ -138,7 +140,9 @@
                     { "data": "id" },
                     { "data": "department" },
                     { "data": "number" },
-                    //{ "data": "called" },
+
+                    //no need to be seen on queue display
+                    //{ "data": "called" }, 
                     //{ "data": "counter" },
                     //{ "data": "recall" }
                 ]
