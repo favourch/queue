@@ -52,7 +52,7 @@ class MethodNodeSpec extends ObjectBehavior
 
     function it_accepts_only_supported_visibilities()
     {
-        $this->shouldThrow('InvalidArgumentException')->duringSetVisibility('stealth');
+        $this->shouldThrow('InvalidArgumentException')->duringSetVisibility('smaroonth');
     }
 
     function it_lowercases_visibility_before_setting_it()

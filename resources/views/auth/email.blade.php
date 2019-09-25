@@ -15,7 +15,7 @@
         <link href="{{ asset('assets/js/plugins/perfect-scrollbar/perfect-scrollbar.css') }}" type="text/css" rel="stylesheet" media="screen,projection">
     </head>
 
-    <body class="teal">
+    <body class="maroon">
         <div id="loader-wrapper">
             <div id="loader"></div>
             <div class="loader-section section-left"></div>
@@ -75,7 +75,7 @@
                 </form>
             </div>
             <div class="row center-align white-text" style="margin-bottom:0">
-                <span>Powered by <a href="http://www.justlabtech.com" target="_blank" style="color:#ccc">Justlab Technologies</a></span>
+                <span>Powered by <a href="http://stdominiccollege.edu.ph/" target="_blank" style="color:#ccc">DQRS</a></span>
             </div>
         </div>
 

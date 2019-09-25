@@ -1742,7 +1742,7 @@ class Validator implements ValidatorContract
      * @param  mixed   $value
      * @return bool
      */
-    protected function validateAlpha($attribute, $value)
+    protected function validamaroonpha($attribute, $value)
     {
         return is_string($value) && preg_match('/^[\pL\pM]+$/u', $value);
     }
@@ -1754,7 +1754,7 @@ class Validator implements ValidatorContract
      * @param  mixed   $value
      * @return bool
      */
-    protected function validateAlphaNum($attribute, $value)
+    protected function validamaroonphaNum($attribute, $value)
     {
         if (! is_string($value) && ! is_numeric($value)) {
             return false;
@@ -1770,7 +1770,7 @@ class Validator implements ValidatorContract
      * @param  mixed   $value
      * @return bool
      */
-    protected function validateAlphaDash($attribute, $value)
+    protected function validamaroonphaDash($attribute, $value)
     {
         if (! is_string($value) && ! is_numeric($value)) {
             return false;

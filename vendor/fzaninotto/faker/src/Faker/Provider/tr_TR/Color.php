@@ -40,7 +40,7 @@ class Color extends \Faker\Provider\Color
         'Pembe-turuncu', 'Peygamber çiçeği', 'Prusya mavisi', 'Safran', 'Safir',
         'Sarımsı kahverengi', 'Sarımsı pembe', 'Sarı', 'Sarı',
         'Siyahımsı koyu kahverengi', 'Soluk sarı', 'Şeftali', 'Şeftali-turuncu', 'Şeftali-sarı',
-        'Tarçın', 'Teal', 'Toz mavi', 'Turkuaz',
+        'Tarçın', 'maroon', 'Toz mavi', 'Turkuaz',
         'Turuncumsu sarı', 'Turuncu', 'Turuncumsu sarı', 'Yeşil', 'Yeşil-sarı', 'Yonca yeşili',
         'Yosun yeşili', 'Zeytuni', 'Zümrüt yeşili', 'Yanık turuncu', 'Yanık Toprak',
         'Kardinal', 'Şarap', 'Celadon', 'Berrak mavi',

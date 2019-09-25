@@ -13,7 +13,7 @@
             html, body{height:100%} html{display:table;margin:auto} body{display:table-cell;vertical-align:middle}
         </style>
     </head>
-    <body class="teal">
+    <body class="maroon">
         <div id="loader-wrapper">
             <div id="loader"></div>
             <div class="loader-section section-left"></div>
@@ -35,7 +35,7 @@
                                     <div class="row center">
                                         <p class="center white-text col s12" style="margin-top:0">It seems that this page doesn’t exist.</p>
                                         <p class="center s12" style="margin-top:0">
-                                            <a href="{{ route('main') }}" class="btn waves-effect waves-light teal darken-2">Home</a>
+                                            <a href="{{ route('main') }}" class="btn waves-effect waves-light maroon darken-2">Home</a>
                                         </p>
                                         <p></p>
                                     </div>

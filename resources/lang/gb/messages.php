@@ -140,22 +140,23 @@ return [
     'display' => [
         'display' => 'Display',
         'token' => 'Token',
-        'please' => 'Please',
-        'proceed_to' => 'Proceed To',
+        'please' => 'PLEASE',
+        'proceed_to' => 'PROCEED TO',
         'persons' => 'Person(s)',
-        'in_queue' => 'In Queue',
+        'in_queue' => 'IN QUEUE',
+        'qn' => 'QUEUE NUMBER',
     ],
 
 
 
     // Dont want to change
 
-    'title' => 'Laravel Installer',
+    'title' => 'DQRS Installer',
     'next' => 'Next Step',
     'finish' => 'Install',
 
     'welcome' => [
-        'title'   => 'Welcome To The Installer',
+        'title'   => 'Welcome To The DQRS Installer',
         'message' => 'Welcome to the setup wizard.',
     ],
 

@@ -234,7 +234,7 @@ var polarData = [
 		},
 		{
 			value: 2100,
-			color: "#009688",
+			color: "#800000",
 			highlight: "#80cbc4",
 			label: "Brazil"
 		},

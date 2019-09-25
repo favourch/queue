@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="msapplication-tap-highlight" content="no">
-        <title>@yield('title') | JL Token</title>
-        <link rel="icon" href="{{ asset('assets/favicon.ico') }}">
+        <title>@yield('title') | DQRS</title>
+        <link rel="icon" href="{{ asset('assets/images/logo.png') }}">
         <link href="{{ asset('assets/css/materialize.min.css') }}" type="text/css" rel="stylesheet" media="screen,projection">
         <link href="{{ asset('assets/js/plugins/perfect-scrollbar/perfect-scrollbar.css') }}" type="text/css" rel="stylesheet" media="screen,projection">
         @yield('css')
@@ -37,8 +37,9 @@
                 </nav>
             </div>
         </header>
-
+        
         <div id="main" style="padding:15px;padding-bottom:0">
+            
             <div class="wrapper">
                 <section id="content">
                     @yield('content')
@@ -49,8 +50,8 @@
         <footer class="page-footer" style="padding:0;margin-top:0">
             <div class="footer-copyright">
                 <div class="container">
-                    <span>Powered by <a class="grey-text text-lighten-3" href="http://www.justlabtech.com" target="_blank">Justlab Technologies</a> All rights reserved.</span>
-                    <span class="right"> <span class="grey-text text-lighten-3">Version</span> 2.1.1</span>
+                    <span>Powered by <a class="grey-text text-lighten-3" href="http://stdominiccollege.edu.ph/" target="_blank">DQRS</a> All rights reserved.</span>
+                    <span class="right"> <span class="grey-text text-lighten-3">Version</span> 1.0.0</span>
                 </div>
             </div>
         </footer>

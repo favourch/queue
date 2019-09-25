@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="msapplication-tap-highlight" content="no">
-        <title>@yield('title') | JL Token</title>
-        <link rel="icon" href="{{ asset('assets/favicon.ico') }}">
+        <title>@yield('title') | DQRS</title>
+        <link rel="icon" href="{{ asset('assets/images/logo.png') }}">
         <link href="{{ asset('assets/css/materialize.min.css') }}" type="text/css" rel="stylesheet" media="screen,projection">
         <link href="{{ asset('assets/js/plugins/perfect-scrollbar/perfect-scrollbar.css') }}" type="text/css" rel="stylesheet" media="screen,projection">
         @yield('css')
@@ -25,7 +25,7 @@
                 <nav class="navbar-color">
                     <div class="nav-wrapper">
                         <ul class="left">
-                            <li><h1 class="logo-wrapper"><a href="{{ route('dashboard') }}" class="brand-logo darken-1"><img src="{{ asset('assets/images/jltoken-logo.png') }}" alt="materialize logo"></a><span class="logo-text">JL Token</span></h1></li>
+                            <li><h1 class="logo-wrapper"><a href="{{ route('dashboard') }}" class="brand-logo darken-1"><img src="{{ asset('assets/images/jltoken-logo.png') }}" alt="materialize logo"></a><span class="logo-text">DQRS</span></h1></li>
                         </ul>
                         <ul class="right hide-on-med-and-down">
                             <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light translation-button"  data-activates="translation-dropdown"><img src="{{ asset('assets/images/flag-icons/'.$clocale->image) }}" alt="{{ $clocale->name }}" /></a></li>
@@ -77,7 +77,7 @@
                         </li>
                         @yield('menu')
                     </ul>
-                    <a href="#" data-activates="slide-out" class="sidebar-collapse btn-floating btn-medium waves-effect waves-light hide-on-large-only teal lighten-1"><i class="mdi-navigation-menu"></i></a>
+                    <a href="#" data-activates="slide-out" class="sidebar-collapse btn-floating btn-medium waves-effect waves-light hide-on-large-only maroon lighten-1"><i class="mdi-navigation-menu"></i></a>
                 </aside>
 
                 <section id="content">
@@ -89,8 +89,8 @@
         <footer class="page-footer">
             <div class="footer-copyright">
                 <div class="container">
-                    <span>Powered by <a class="grey-text text-lighten-3" href="http://www.justlabtech.com" target="_blank">Justlab Technologies</a> All rights reserved.</span>
-                    <span class="right"> <span class="grey-text text-lighten-3">Version</span> 2.1.1</span>
+                    <span>Powered by <a class="grey-text text-lighten-3" href="http://stdominiccollege.edu.ph/" target="_blank">DQRS</a> All rights reserved.</span>
+                    <span class="right"> <span class="grey-text text-lighten-3">Version</span> 1.0.0</span>
                 </div>
             </div>
         </footer>

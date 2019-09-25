@@ -86,7 +86,7 @@
             @can('access', \App\Models\User::class)
                 <div class="row">
                     <div class="col s12 m6 l6">
-                        <div class="card-panel hoverable waves-effect waves-dark teal lighten-3 white-text" style="display:inherit">
+                        <div class="card-panel hoverable waves-effect waves-dark maroon lighten-3 white-text" style="display:inherit">
                             <span class="chart-title">{{ trans('messages.queue_details') }}</span>
                             <div class="trending-line-chart-wrapper">
                                 <canvas id="queue-details-chart" height="155" style="height:308px"></canvas>

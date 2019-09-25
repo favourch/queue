@@ -24,6 +24,7 @@ class DisplayRepository
         $data = [];
         for ($i=0;$i<4;$i++) {
             $data[$i]['call_id'] = (isset($calls[$i]))?$calls[$i]->id:'NIL';
+            $data[$i]['name'] = (isset($calls[$i]))?$calls[$i]->department->name:'NIL';
             $data[$i]['number'] = (isset($calls[$i]))?(($calls[$i]->department->letter!='')?$calls[$i]->department->letter.'-'.$calls[$i]->number:$calls[$i]->number):'NIL';
             $data[$i]['call_number'] = (isset($calls[$i]))?(($calls[$i]->department->letter!='')?$calls[$i]->department->letter.' '.$calls[$i]->number:$calls[$i]->number):'NIL';
             $data[$i]['counter'] = (isset($calls[$i]))?$calls[$i]->counter->name:'NIL';

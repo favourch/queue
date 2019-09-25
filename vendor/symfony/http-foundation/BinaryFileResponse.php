@@ -18,7 +18,7 @@ use Symfony\Component\HttpFoundation\File\Exception\FileException;
  * BinaryFileResponse represents an HTTP response delivering a file.
  *
  * @author Niklas Fiekas <niklas.fiekas@tu-clausthal.de>
- * @author stealth35 <stealth35-php@live.fr>
+ * @author smaroonth35 <smaroonth35-php@live.fr>
  * @author Igor Wiedler <igor@wiedler.ch>
  * @author Jordan Alliot <jordan.alliot@gmail.com>
  * @author Sergey Linnik <linniksa@gmail.com>

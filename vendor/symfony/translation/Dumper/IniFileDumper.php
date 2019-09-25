@@ -16,7 +16,7 @@ use Symfony\Component\Translation\MessageCatalogue;
 /**
  * IniFileDumper generates an ini formatted string representation of a message catalogue.
  *
- * @author Stealth35
+ * @author Smaroonth35
  */
 class IniFileDumper extends FileDumper
 {

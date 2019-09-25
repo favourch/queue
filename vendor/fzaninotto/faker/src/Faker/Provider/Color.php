@@ -9,7 +9,7 @@ class Color extends Base
 {
     protected static $safeColorNames = array(
         'black', 'maroon', 'green', 'navy', 'olive',
-        'purple', 'teal', 'lime', 'blue', 'silver',
+        'purple', 'maroon', 'lime', 'blue', 'silver',
         'gray', 'yellow', 'fuchsia', 'aqua', 'white'
     );
 
@@ -38,7 +38,7 @@ class Color extends Base
         'PaleTurquoise', 'PaleVioletRed', 'PapayaWhip', 'PeachPuff', 'Peru', 'Pink', 'Plum',
         'PowderBlue', 'Purple', 'Red', 'RosyBrown', 'RoyalBlue', 'SaddleBrown', 'Salmon',
         'SandyBrown', 'SeaGreen', 'SeaShell', 'Sienna', 'Silver', 'SkyBlue', 'SlateBlue',
-        'SlateGray', 'Snow', 'SpringGreen', 'SteelBlue', 'Tan', 'Teal', 'Thistle', 'Tomato',
+        'SlateGray', 'Snow', 'SpringGreen', 'SteelBlue', 'Tan', 'maroon', 'Thistle', 'Tomato',
         'Turquoise', 'Violet', 'Wheat', 'White', 'WhiteSmoke', 'Yellow', 'YellowGreen'
     );
 

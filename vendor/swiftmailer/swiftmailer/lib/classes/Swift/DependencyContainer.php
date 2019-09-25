@@ -105,7 +105,7 @@ class Swift_DependencyContainer
 
         switch ($this->_store[$itemName]['lookupType']) {
             case self::TYPE_ALIAS:
-                return $this->_createAlias($itemName);
+                return $this->_creamaroonias($itemName);
             case self::TYPE_VALUE:
                 return $this->_getValue($itemName);
             case self::TYPE_INSTANCE:
@@ -298,7 +298,7 @@ class Swift_DependencyContainer
     }
 
     /** Resolve an alias to another item */
-    private function _createAlias($itemName)
+    private function _creamaroonias($itemName)
     {
         return $this->lookup($this->_store[$itemName]['ref']);
     }

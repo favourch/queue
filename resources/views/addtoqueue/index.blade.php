@@ -28,11 +28,12 @@
         <div id="printarea" style="line-height:1.25">
             <span style="font-size:27px; font-weight: bold">{{ $settings->name }}</span><br>
             <span style="font-size:25px">{{ session()->get('department_name') }}</span><br>
-            <span style="font-size:20px">Your Token Number</span><br>
+            <span style="font-size:20px">Your Queue Number</span><br>
             <span><h3 style="font-size:70px;font-weight:bold;margin:0;line-height:1.5">{{ session()->get('number') }}</h3></span>
             <span style="font-size:20px">Please wait for your turn</span><br>
             <span style="font-size:20px">Total customer(s) waiting: {{ session()->get('total')-1 }}</span><br>
-            <span style="float:left">{{ \Carbon\Carbon::now()->format('d-m-Y') }}</span><span style="float:right">{{ \Carbon\Carbon::now()->format('h:i:s A') }}</span>
+            <br><br>
+            <span style="float:left">{{ \Carbon\Carbon::now()->format('d-m-Y') }}</span><span >Dominican Queue Reservation System</span><span style="float:right">{{ \Carbon\Carbon::now()->format('h:i:s A') }}</span>
         </div>
         <script>
             window.onload = function(){window.print();}

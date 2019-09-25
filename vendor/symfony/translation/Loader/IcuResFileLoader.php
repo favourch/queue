@@ -19,7 +19,7 @@ use Symfony\Component\Config\Resource\DirectoryResource;
 /**
  * IcuResFileLoader loads translations from a resource bundle.
  *
- * @author stealth35
+ * @author smaroonth35
  */
 class IcuResFileLoader implements LoaderInterface
 {
