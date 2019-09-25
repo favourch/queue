@@ -7,7 +7,7 @@
 <?php $__env->startSection('content'); ?>
 
     <div id="callarea" class="row" style="line-height:1.23">
-        <div class="col s12 m4">
+        <div class="col s12 m3">
             <div class="card">
                 <div class="card-content" style="font-size:14px">
                     <span class="card-title" style="line-height:0;font-size:22px"><strong><?php echo e(trans('QUEUE')); ?></strong></span>
@@ -18,6 +18,8 @@
                                 <th>#</th>
                                 <th><?php echo e(trans('messages.mainapp.menu.department')); ?></th>
                                 <th><?php echo e(trans('messages.call.number')); ?></th>
+                                
+                                <!--hidden from display queue-->
                                 <!--<th><?php echo e(trans('messages.call.called')); ?></th>-->
                                 <!--<th><?php echo e(trans('messages.mainapp.menu.counter')); ?></th>-->
                                 <!--<th><?php echo e(trans('messages.call.recall')); ?></th>-->
@@ -27,12 +29,35 @@
                 </div>
             </div>
         </div>
-        <div class="col m8">
+        <div class="col m3">
             <div class="card-panel center-align" style="margin-bottom:0">
-                <span style="font-size:45px"><?php echo e(trans('messages.display.token')); ?> <?php echo e(trans('messages.call.number')); ?></span><br>
-                <span id="num0" style="font-size:185px;color:red;font-weight:bold;line-height:1.5"><?php echo e($data[0]['number']); ?></span><br>
-                <span style="font-size:40px"><?php echo e(trans('messages.display.please')); ?> <?php echo e(trans('messages.display.proceed_to')); ?></span><br>
-                <span id="cou0" style="font-size:80px; color:red;line-height:1.5"><?php echo e($data[0]['counter']); ?></span>
+                <span style="font-size:2rem;"><?php echo e(trans('messages.display.token')); ?> <?php echo e(trans('messages.call.number')); ?></span><br>
+                <span id="num0" style="font-size:8rem;color:red;font-weight:bold;line-height:1.5"><?php echo e($data[0]['number']); ?></span><br>
+                <span style="font-size:1.5rem;"><?php echo e(trans('messages.display.please')); ?> <?php echo e(trans('messages.display.proceed_to')); ?></span><br>
+                
+                <span id="dname0" style="font-size:3rem; color:green;line-height:1.5"><?php echo e($data[0]['dname']); ?></span>
+                <span id="cou0" style="font-size:3rem; color:red;line-height:1.5"><?php echo e($data[0]['counter']); ?></span>
+            </div>
+        </div>
+        <div class="col m3">
+            <div class="card-panel center-align" style="margin-bottom:0">
+                <span style="font-size:2rem;"><?php echo e(trans('messages.display.token')); ?> <?php echo e(trans('messages.call.number')); ?></span><br>
+                <span id="num1" style="font-size:8rem;color:red;font-weight:bold;line-height:1.5"><?php echo e($data[1]['number']); ?></span><br>
+                <span style="font-size:1.5rem"><?php echo e(trans('messages.display.please')); ?> <?php echo e(trans('messages.display.proceed_to')); ?></span><br>
+                
+                <span id="dname1" style="font-size:3rem; color:green;line-height:1.5"><?php echo e($data[1]['dname']); ?></span>
+                <span id="cou1" style="font-size:3rem; color:red;line-height:1.5"><?php echo e($data[1]['counter']); ?></span>
+            </div>
+        </div>
+        <div class="col m3">
+            <div class="card-panel center-align" style="margin-bottom:0">
+                <span style="font-size:2rem;"><?php echo e(trans('messages.display.token')); ?> <?php echo e(trans('messages.call.number')); ?></span><br>
+                <span id="num2" style="font-size:8rem;color:red;font-weight:bold;line-height:1.5"><?php echo e($data[2]['number']); ?></span><br>
+                <span style="font-size:1.5rem"><?php echo e(trans('messages.display.please')); ?> <?php echo e(trans('messages.display.proceed_to')); ?></span><br>
+                
+                <span id="dname2" style="font-size:3rem; color:green;line-height:1.5"><?php echo e($data[2]['dname']); ?></span>
+                <span id="cou2" style="font-size:3rem; color:red;line-height:1.5"><?php echo e($data[2]['counter']); ?></span>
+
             </div>
         </div>
     </div>
@@ -71,13 +96,18 @@
                     if (curr!=s[0].call_id) {
                         $("#callarea").fadeOut(function(){
                             $('#num0').html(s[0].number);
+                            $("#dname0").html(s[0].dname);
                             $("#cou0").html(s[0].counter);
                             $('#num1').html(s[1].number);
+                            $("#dname1").html(s[1].dname);
                             $("#cou1").html(s[1].counter);
                             $('#num2').html(s[2].number);
                             $("#cou2").html(s[2].counter);
+                            $("#dname2").html(s[2].dname);
                             $('#num3').html(s[3].number);
+                            $("#dname3").html(s[3].dname);
                             $("#cou3").html(s[3].counter);
+                            
                         });
                         $("#callarea").fadeIn();
                         if (curr!=0) {
@@ -135,7 +165,9 @@
                     { "data": "id" },
                     { "data": "department" },
                     { "data": "number" },
-                    //{ "data": "called" },
+
+                    //no need to be seen on queue display
+                    //{ "data": "called" }, 
                     //{ "data": "counter" },
                     //{ "data": "recall" }
                 ]
