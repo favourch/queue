@@ -6,63 +6,73 @@
 
 <?php $__env->startSection('content'); ?>
 
-    <div id="callarea" class="row" style="line-height:1.23">
-        <div class="col s12 m3">
-            <div class="card">
-                <div class="card-content" style="font-size:14px">
-                    <span class="card-title" style="line-height:0;font-size:22px"><strong><?php echo e(trans('messages.display.in_queue')); ?></strong></span>
-                    <div class="divider" style="margin:15px 0 10px 0"></div>
-                    <table id="call-table" class="display" cellspacing="0">
-                        <thead style="display:none;">
-                            <tr>
-                                <th>#</th>
-                                <th><?php echo e(trans('messages.mainapp.menu.department')); ?></th>
-                                <th><?php echo e(trans('messages.call.number')); ?></th>
-                                
-                                <!--hidden from display queue-->
-                                <!--<th><?php echo e(trans('messages.call.called')); ?></th>-->
-                                <!--<th><?php echo e(trans('messages.mainapp.menu.counter')); ?></th>-->
-                                <!--<th><?php echo e(trans('messages.call.recall')); ?></th>-->
-                            </tr>
-                        </thead>
-                    </table>
-                </div>
+    <div id="callarea" class="row" style="line-height:1.23;">
+        
+
+        <div class="col s12 m7">
+            <!--<img src="assets/images/sample-ads.jpg" style="width:100%;">-->
+
+           <!-- <iframe id="existing-iframe-example"
+          width="960" height="540"
+          src="https://www.youtube.com/embed/1Q1cZYhobhc?autoplay=1&mute=1&enablejsapi=1&controls=0&loop=1&playlist=1Q1cZYhobhc"
+          frameborder="0"></iframe>-->
+
+          <video onloadstart="this.volume=0.05" width="960" loop="true" autoplay="autoplay">
+            <source src="assets/images/compilation1.mp4" type="video/mp4" />
+            
+        </div>
+            
+            
+
+
+<div class="col m3 offset-m2 center-align" >
+        <div class="row">
+            <div class="card-panel center-align" style="margin-bottom:0">
+                <!--<span style="font-size:0.25rem"><?php echo e(trans('messages.display.qn')); ?></span><br>-->
+                <span id="num0" style="font-size:3rem;color:red;font-weight:bold;line-height:1.5"><?php echo e($data[0]['number']); ?></span><br>
+                <!--<span style="font-size:0.75rem"><?php echo e(trans('messages.display.please')); ?> <?php echo e(trans('messages.display.proceed_to')); ?></span><br>-->
+                <span id="dname0" style="font-size:1.50rem; color:green;line-height:1.5;font-weight:bold"><?php echo e($data[0]['name']); ?></span><br>
+                <span id="cou0" style="font-size:1rem; color:black;line-height:1.5;font-weight:bold"><?php echo e($data[0]['counter']); ?></span>
             </div>
         </div>
 
-        <div class="col m3">
+        <div class="row">
             <div class="card-panel center-align" style="margin-bottom:0">
-                <span style="font-size:2.25rem"><?php echo e(trans('messages.display.qn')); ?></span><br>
-                <span id="num0" style="font-size:8rem;color:red;font-weight:bold;line-height:1.5"><?php echo e($data[0]['number']); ?></span><br>
-                <span style="font-size:1.75rem"><?php echo e(trans('messages.display.please')); ?> <?php echo e(trans('messages.display.proceed_to')); ?></span><br>
-                <span id="dname0" style="font-size:3.25rem; color:green;line-height:1.5;font-weight:bold"><?php echo e($data[0]['name']); ?></span><br>
-                <span id="cou0" style="font-size:4rem; color:black;line-height:1.5;font-weight:bold"><?php echo e($data[0]['counter']); ?></span>
+                <!--<span style="font-size:0.25rem"><?php echo e(trans('messages.display.qn')); ?></span><br>-->
+                <span id="num1" style="font-size:3rem;color:red;font-weight:bold;line-height:1.5"><?php echo e($data[1]['number']); ?></span><br>
+                <!--<span style="font-size:0.75rem"><?php echo e(trans('messages.display.please')); ?> <?php echo e(trans('messages.display.proceed_to')); ?></span><br>-->
+                <span id="dname1" style="font-size:1.50rem; color:green;line-height:1.5;font-weight:bold"><?php echo e($data[1]['name']); ?></span><br>
+                <span id="cou1" style="font-size:1rem; color:black;line-height:1.5;font-weight:bold"><?php echo e($data[1]['counter']); ?></span>
             </div>
         </div>
 
-        <div class="col m3">
+        <div class="row">
             <div class="card-panel center-align" style="margin-bottom:0">
-                <span style="font-size:2.25rem"><?php echo e(trans('messages.display.qn')); ?></span><br>
-                <span id="num1" style="font-size:8rem;color:red;font-weight:bold;line-height:1.5"><?php echo e($data[1]['number']); ?></span><br>
-                <span style="font-size:1.75rem"><?php echo e(trans('messages.display.please')); ?> <?php echo e(trans('messages.display.proceed_to')); ?></span><br>
-                <span id="dname1" style="font-size:3.25rem; color:green;line-height:1.5;font-weight:bold"><?php echo e($data[1]['name']); ?></span><br>
-                <span id="cou1" style="font-size:4rem; color:black;line-height:1.5;font-weight:bold"><?php echo e($data[1]['counter']); ?></span>
+                <!--<span style="font-size:0.25rem"><?php echo e(trans('messages.display.qn')); ?></span><br>-->
+                <span id="num2" style="font-size:3rem;color:red;font-weight:bold;line-height:1.5"><?php echo e($data[2]['number']); ?></span><br>
+                <!--<span style="font-size:0.75rem"><?php echo e(trans('messages.display.please')); ?> <?php echo e(trans('messages.display.proceed_to')); ?></span><br>-->
+                <span id="dname2" style="font-size:1.50rem; color:green;line-height:1.5;font-weight:bold"><?php echo e($data[2]['name']); ?></span><br>
+                <span id="cou2" style="font-size:1rem; color:black;line-height:1.5;font-weight:bold"><?php echo e($data[2]['counter']); ?></span>
             </div>
         </div>
 
-        <div class="col m3">
+        <!--<div class="col m3">
             <div class="card-panel center-align" style="margin-bottom:0">
-                <span style="font-size:2.25rem"><?php echo e(trans('messages.display.qn')); ?></span><br>
-                <span id="num2" style="font-size:8rem;color:red;font-weight:bold;line-height:1.5"><?php echo e($data[2]['number']); ?></span><br>
-                <span style="font-size:1.75rem"><?php echo e(trans('messages.display.please')); ?> <?php echo e(trans('messages.display.proceed_to')); ?></span><br>
-                <span id="dname2" style="font-size:3.25rem; color:green;line-height:1.5;font-weight:bold"><?php echo e($data[2]['name']); ?></span><br>
-                <span id="cou2" style="font-size:4rem; color:black;line-height:1.5;font-weight:bold"><?php echo e($data[2]['counter']); ?></span>
+                <span style="font-size:1.25rem"><?php echo e(trans('messages.display.qn')); ?></span><br>
+                <span id="num3" style="font-size:5rem;color:red;font-weight:bold;line-height:1.5"><?php echo e($data[3]['number']); ?></span><br>
+                <span style="font-size:0.75rem"><?php echo e(trans('messages.display.please')); ?> <?php echo e(trans('messages.display.proceed_to')); ?></span><br>
+                <span id="dname3" style="font-size:2.25rem; color:green;line-height:1.5;font-weight:bold"><?php echo e($data[3]['name']); ?></span><br>
+                <span id="cou3" style="font-size:2rem; color:black;line-height:1.5;font-weight:bold"><?php echo e($data[3]['counter']); ?></span>
             </div>
-        </div>
-    </div>
-    <div class="row" style="margin-bottom:0;font-size:<?php echo e($settings->size); ?>px;color:<?php echo e($settings->color); ?>">
+        </div>-->
+</div>
+
+<div class="row align-self-center" style="font-size:<?php echo e($settings->size); ?>px;color:<?php echo e($settings->color); ?>">
         <marquee><?php echo e($settings->notification); ?></marquee>
     </div>
+    
+    </div>
+    
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('script'); ?>

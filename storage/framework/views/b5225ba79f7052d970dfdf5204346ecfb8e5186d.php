@@ -28,7 +28,7 @@
                             <li><h1 class="logo-wrapper"><a href="<?php echo e(route('dashboard')); ?>" class="brand-logo darken-1"><img src="<?php echo e(asset('assets/images/jltoken-logo.png')); ?>" alt="materialize logo"></a><span class="logo-text">DQRS</span></h1></li>
                         </ul>
                         <ul class="right hide-on-med-and-down">
-                            <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light translation-button"  data-activates="translation-dropdown"><img src="<?php echo e(asset('assets/images/flag-icons/'.$clocale->image)); ?>" alt="<?php echo e($clocale->name); ?>" /></a></li>
+                            <!--<li><a href="javascript:void(0);" class="waves-effect waves-block waves-light translation-button"  data-activates="translation-dropdown"><img src="<?php echo e(asset('assets/images/flag-icons/'.$clocale->image)); ?>" alt="<?php echo e($clocale->name); ?>" /></a></li>-->
                             <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light notification-button" data-activates="notifications-dropdown"><i class="mdi-editor-insert-link"></i></a></li>
                             <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light toggle-fullscreen"><i class="mdi-action-settings-overscan"></i></a></li>
                         </ul>
@@ -46,7 +46,7 @@
                             <li><a href="<?php echo e(route('add_to_queue')); ?>" target="_blank" style="font-weight:400"><?php echo e(trans('messages.mainapp.issue_url')); ?></a></li>
                         </ul>
                         <ul class="right hide-on-med-and-down">
-                            <span class="truncate" style="margin-right:20px;font-size:19px"><?php echo e($company_name); ?></span>
+                            <!--<span class="truncate" style="margin-right:20px;font-size:19px"><?php echo e($company_name); ?></span>-->
                         </ul>
                     </div>
                 </nav>
@@ -89,7 +89,7 @@
         <footer class="page-footer">
             <div class="footer-copyright">
                 <div class="container">
-                    <span>Powered by <a class="grey-text text-lighten-3" href="http://stdominiccollege.edu.ph/" target="_blank">DQRS</a> All rights reserved.</span>
+                    <span>© <a class="grey-text text-lighten-3" href="http://stdominiccollege.edu.ph/" target="_blank">DQRS</a> 2019</span>
                     <span class="right"> <span class="grey-text text-lighten-3">Version</span> 1.0.0</span>
                 </div>
             </div>

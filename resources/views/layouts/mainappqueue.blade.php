@@ -25,13 +25,13 @@
                 <nav class="navbar-color">
                     <div class="nav-wrapper">
                         <ul class="left">
-                            <li><h1 class="logo-wrapper"><a href="{{ route('dashboard') }}" class="brand-logo darken-1"><img src="{{ asset('assets/images/jltoken-logo.png') }}" alt="materialize logo"></a><span class="logo-text">JL Token</span></h1></li>
+                            <li><h1 class="logo-wrapper"><a href="{{ route('dashboard') }}" class="brand-logo darken-1"><img src="{{ asset('assets/images/jltoken-logo.png') }}" alt="materialize logo"></a><span class="logo-text">DQRS</span></h1></li>
                         </ul>
                         <ul class="right hide-on-med-and-down">
                             <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light toggle-fullscreen"><i class="mdi-action-settings-overscan"></i></a></li>
                         </ul>
                         <ul class="right">
-                            <span class="truncate" style="margin-right:20px;font-size:20px">{{ $settings->name }}</span>
+                            <!--<span class="truncate" style="margin-right:20px;font-size:20px">{{ $settings->name }}</span>-->
                         </ul>
                     </div>
                 </nav>
@@ -47,13 +47,13 @@
             </div>
         </div>
 
-        <footer class="page-footer" style="padding:0;margin-top:0">
+        <!--<footer class="page-footer" style="padding:0;margin-top:0">
             <div class="footer-copyright">
                 <div class="container">
-                    <span>Powered by <a class="grey-text text-lighten-3" href="http://stdominiccollege.edu.ph/" target="_blank">DQRS</a> All rights reserved.</span>
+                    <span>© <a class="grey-text text-lighten-3" href="http://stdominiccollege.edu.ph/" target="_blank">DQRS</a> 2019</span>
                     <span class="right"> <span class="grey-text text-lighten-3">Version</span> 1.0.0</span>
                 </div>
-            </div>
+            </div>-->
         </footer>
         @yield('print')
         <script type="text/javascript" src="{{ asset('assets/js/plugins/jquery-1.11.2.min.js') }}"></script>

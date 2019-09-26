@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>JL Token Installation</title>
+    <title>DQRS Installation</title>
     <link rel="icon" href="{{ asset('assets/favicon.ico') }}" sizes="16x16">
     <link href="{{ asset('assets/installer/css/style.min.css') }}" rel="stylesheet"/>
   </head>

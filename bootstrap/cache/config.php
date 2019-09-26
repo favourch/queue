@@ -1,7 +1,7 @@
 <?php return array (
   'app' => 
   array (
-    'name' => 'JL Token',
+    'name' => 'DQRS',
     'env' => 'production',
     'debug' => false,
     'url' => 'http://localhost',

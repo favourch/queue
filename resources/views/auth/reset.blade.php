@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="msapplication-tap-highlight" content="no">
-        <title>Reset Password | JL Token</title>
+        <title>Reset Password | DQRS</title>
         <link rel="icon" href="{{ asset('assets/favicon.ico') }}">
 
         <link href="{{ asset('assets/css/materialize.min.css') }}"type="text/css" rel="stylesheet" media="screen,projection">
@@ -42,7 +42,7 @@
                     <input type="hidden" name="token" value="{{ $token }}">
                     <div class="row">
                         <div class="input-field col s12 center">
-                            <p class="center login-form-text" style="font-size:23px;margin-top:5px">JL Token</p>
+                            <p class="center login-form-text" style="font-size:23px;margin-top:5px">DQRS</p>
                             <p class="center login-form-text" style="letter-spacing:1px">Enter your email and new Password</p>
                         </div>
                     </div>
